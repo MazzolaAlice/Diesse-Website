@@ -294,7 +294,8 @@ nav a:hover {
 
 /* 8. CATALOGHI GRID */
 .catalog-page {
-    padding: 40px 0 80px 0;
+    padding: 60px 0;
+    background-color: #fff;
     text-align: center;
 }
 
@@ -310,7 +311,7 @@ nav a:hover {
     /* Modifica questa riga da auto-fill a repeat(3, 1fr) */
     grid-template-columns: repeat(3, 1fr); 
     gap: 40px;
-    max-width: 1200px;
+    max-width: 1100px;
     margin: 0 auto;
     padding: 0 20px;
 }
@@ -376,6 +377,191 @@ nav a:hover {
     letter-spacing: 1px;
 }
 
+/* --- STATO ATTIVO NAVBAR --- */
+
+/* Colore azzurro per la pagina corrente */
+nav a.active {
+    color: var(--accent-blue) !important;
+    position: relative;
+}
+
+/* Opzionale: una piccola linea azzurra sotto il link attivo */
+nav a.active::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--accent-blue);
+}
+/*Aggiunta home*/
+/* Sezione Intro Home */
+.home-intro {
+    padding: 80px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.container-small {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.home-intro .label {
+    display: block;
+    color: var(--accent-blue);
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    margin-bottom: 15px;
+}
+
+.home-intro h2 {
+    color: var(--brand-blue);
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 25px;
+    line-height: 1.2;
+}
+
+.home-intro p {
+    color: #666;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 40px;
+    font-weight: 300;
+}
+
+/* Pulsanti della sezione */
+.cta-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+
+.btn-text {
+    text-decoration: none;
+    color: var(--brand-blue);
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: opacity 0.3s;
+}
+
+.btn-text:hover {
+    opacity: 0.7;
+}
+
+/* Bottone WhatsApp Professionale */
+.btn-whatsapp {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background-color: var(--brand-blue); 
+    color: white;
+    text-decoration: none;
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    box-shadow:var(--accent-blue);
+}
+
+.btn-whatsapp:hover {
+    background-color: var(--accent-blue);
+    transform: translateY(-3px);
+    box-shadow: var(--accent-blue);
+}
+
+.wa-icon {
+    width: 22px;
+    height: 22px;
+}
+
+/*categorie cataloghi*/
+/* Stile per le sezioni dei cataloghi */
+.catalog-category {
+    margin-bottom: 60px;
+    
+}
+
+.section-title {
+    text-align: center;
+    color: var(--brand-blue);
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+.subtitle {
+    text-align: center;
+    color: #888;
+    margin-bottom: 60px;
+    font-weight: 300;
+}
+.catalog-category {
+    margin-bottom: 80px;
+}
+
+.category-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.2rem;
+    color: var(--accent-blue);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 700;
+    margin-bottom: 40px;
+    white-space: nowrap; 
+}
+
+/* Le linee decorative */
+.category-title::before,
+.category-title::after {
+    content: "";
+    flex-grow: 1;
+    height: 1px;
+    background: #e0e0e0; 
+    margin: 0 30px;
+    max-width: 150px;
+}
+.catalog-category {
+    margin-bottom: 80px;
+}
+
+/* Assicurati che la griglia mantenga 3 colonne dove possibile */
+.catalog-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+/* Titolo Categoria con Linee ai lati */
+.category-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 40px;
+} 
+/* Correzione per schermi medi e piccoli */
+@media (max-width: 992px) {
+    .catalog-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 600px) {
+    .catalog-grid { grid-template-columns: 1fr; }
+    .category-title { font-size: 1.2rem; }
+}
+
+/* Ottimizzazione Mobile */
+@media (max-width: 768px) {
+    .home-intro h2 { font-size: 1.8rem; }
+    .home-intro { padding: 50px 20px; }
+}
 /* 9. MEDIA QUERIES (RESPONSIVE) */
 
 /* Tablet (sotto i 992px) */
